@@ -32,8 +32,10 @@ const Form = ({
 
   return (
     <form onSubmit={onSubmit}>
-      {template({ renderField })}
-      <button type="submit">{globalConfig.submitText || 'Submit'}</button>
+      <div className="mb-2">{template({ renderField })}</div>
+      <button type="submit" className="btn btn-block btn-primary">
+        {globalConfig.submitText || 'Submit'}
+      </button>
     </form>
   );
 };

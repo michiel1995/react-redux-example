@@ -5,10 +5,22 @@
 
 body,
 html {
-  font-family: 'Muli';
-  font-size: 16px;
+  font-family: $font-family;
+  font-size: $font-size;
 }
+h1 {
+  font-size: 3.125rem;
+  font-weight: 900;
+}
+
 h6 {
   font-size: 1.3rem;
   font-weight: normal;
+  color: $subtitle-color;
+}
+
+@for $i from 1 through 8 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
 }

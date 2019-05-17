@@ -1,4 +1,7 @@
 @import 'variables';
-@import 'bootstrap';
+@import 'mixins';
+@import 'reset';
 @import 'base';
 @import 'fonts';
+
+@import 'components/button';

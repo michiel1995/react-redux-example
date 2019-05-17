@@ -1,0 +1,15 @@
+.btn {
+  border: none;
+  border-radius: 3px;
+  padding: 0.9rem 1rem;
+  box-shadow: -2px 1px 19px -1px rgba(184, 184, 184, 1);
+
+  &.btn-block {
+    display: block;
+    width: 100%;
+  }
+  &.btn-primary {
+    background-color: $primary;
+    color: white;
+  }
+}
