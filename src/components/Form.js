@@ -1,5 +1,6 @@
 import React from 'react';
 import { Field } from 'redux-form';
+import CustomField from './Field';
 
 export type FormTemplateProps = {
   renderField: (key: string) => React.node,
@@ -18,15 +19,14 @@ const Form = ({
   const renderField = (key) => {
     const config = fields[key];
     return (
-      <div>
-        <label htmlFor={key}>{config.label}</label>
-        <Field
-          name={key}
-          component="input"
-          type={config.type || 'text'}
-          placeholder={config.placeholder}
-        />
-      </div>
+      <Field
+        label={config.label}
+        name={key}
+        component="input"
+        component={CustomField}
+        type={config.type || 'text'}
+        placeholder={config.placeholder}
+      />
     );
   };
 
