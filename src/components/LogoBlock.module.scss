@@ -4,10 +4,20 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  color: white;
+  overflow: hidden;
 }
 
 .wineBottle {
   position: absolute;
   bottom: -25%;
   width: 100%;
+}
+.subtitle {
+  text-align: center;
+  color: rgb(200, 200, 200);
+}
+
+.logo {
+  margin-bottom: 1rem;
 }
