@@ -1,0 +1,33 @@
+$multi-font-path: '.../assets/font-multi';
+@font-face {
+  font-family: 'Muli';
+  src: url(../assets/font-multi/Muli-Light.eot);
+  src: url(../assets/font-multi/Muli-Light.eot) format('embedded-opentype'),
+    url(../assets/font-multi/Muli-Light.woff) format('woff'),
+    url(../assets/font-multi/Muli-Light.ttf) format('truetype'),
+    url(../assets/font-multi/Muli-Light.svg) format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url(../assets/font-multi/Muli-Regular.eot);
+  src: url(../assets/font-multi/Muli-Regular.eot) format('embedded-opentype'),
+    url(../assets/font-multi/Muli-Regular.woff) format('woff'),
+    url(../assets/font-multi/Muli-Regular.ttf) format('truetype'),
+    url(../assets/font-multi/Muli-Regular.svg#Muli-Regular) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url(../assets/font-multi/Muli-Black.eot);
+  src: url(../assets/font-multi/Muli-Black.eot) format('embedded-opentype'),
+    url(../assets/font-multi/Muli-Black.woff) format('woff'),
+    url(../assets/font-multi/Muli-Black.ttf) format('truetype'),
+    url(../assets/font-multi/Muli-Black.svg#Muli-Black) format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
