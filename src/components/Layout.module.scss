@@ -1,0 +1,15 @@
+.layout {
+  min-height: 100vh;
+}
+
+.layoutSplit {
+  display: flex;
+  min-height: 100vh;
+
+  > div {
+    flex: 1;
+  }
+}
+
+.layoutContent {
+}
