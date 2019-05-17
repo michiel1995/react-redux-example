@@ -1,6 +1,6 @@
 import actions from './actions';
 import constants from './constants';
-import endpoints from './endpoints';
+import api from './api';
 import reducers from './reducers';
 import selectors from './selectors';
 import sagas from './sagas';
@@ -8,7 +8,7 @@ import sagas from './sagas';
 export default {
   actions,
   constants,
-  endpoints,
+  api,
   reducers,
   selectors,
   sagas,

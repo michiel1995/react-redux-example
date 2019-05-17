@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import registerFormConfig from '../config/forms/register';
-import actions from '../store/actions';
+import store from '../store';
 import createReduxForm from './util/createReduxForm';
 
-const RegisterReduxForm = createReduxForm('auth.registerForm', registerFormConfig);
+const RegisterReduxForm = createReduxForm(store.constants.auth.registerFormKey, registerFormConfig);
 
 const mapDispatchToProps = dispatch => ({
-  onSubmit: bindActionCreators(actions.auth.uiActions.register, dispatch),
+  onSubmit: bindActionCreators(store.actions.auth.uiActions.register, dispatch),
 });
 
 export default connect(
