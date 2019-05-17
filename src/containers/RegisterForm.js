@@ -6,11 +6,15 @@ import createReduxForm from './util/createReduxForm';
 
 const RegisterReduxForm = createReduxForm(store.constants.auth.registerFormKey, registerFormConfig);
 
+const mapStateToProps = state => ({
+  isLoading: store.selectors.auth.isLoading(state),
+});
+
 const mapDispatchToProps = dispatch => ({
   onSubmit: bindActionCreators(store.actions.auth.uiActions.register, dispatch),
 });
 
 export default connect(
-  () => ({}),
+  mapStateToProps,
   mapDispatchToProps,
 )(RegisterReduxForm);

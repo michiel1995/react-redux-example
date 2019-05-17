@@ -8,14 +8,16 @@ export type FormTemplateProps = {
 
 type FormProps = {
   onSubmit: void,
+  isLoading: Boolean,
   globalConfig: Object<{ submitText?: String }>,
   fields: Object,
   template: (config: FormTemplateProps) => React.Node,
 };
 
 const Form = ({
-  onSubmit, globalConfig, fields, template,
+  onSubmit, globalConfig, fields, template, isLoading,
 }: FormProps) => {
+  console.log(isLoading);
   const renderField = (key) => {
     const config = fields[key];
     return (
