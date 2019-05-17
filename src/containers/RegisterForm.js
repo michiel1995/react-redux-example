@@ -1,20 +1,16 @@
-import React from 'react';
-import { reduxForm } from 'redux-form';
-import type { FormProps } from 'redux-form';
-import Form from '../components/Form';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import registerFormConfig from '../config/forms/register';
+import actions from '../store/actions';
+import createReduxForm from './util/createReduxForm';
 
-const RegisterFormContainer = ({ handleSubmit }: FormProps) => (
-  <Form
-    onSubmit={handleSubmit}
-    globalConfig={registerFormConfig.global}
-    template={registerFormConfig.template}
-    fields={registerFormConfig.fields}
-  />
-);
+const RegisterReduxForm = createReduxForm('auth.registerForm', registerFormConfig);
 
-const reduxFormConfig = {
-  form: 'auth.registerForm',
-};
+const mapDispatchToProps = dispatch => ({
+  onSubmit: bindActionCreators(actions.auth.uiActions.register, dispatch),
+});
 
-export default reduxForm(reduxFormConfig)(RegisterFormContainer);
+export default connect(
+  () => ({}),
+  mapDispatchToProps,
+)(RegisterReduxForm);
