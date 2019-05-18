@@ -1,6 +1,6 @@
 import { put, call } from 'redux-saga/effects';
 
-export const apiSagaWrapper = (apiAction, apiFn, args) => function* () {
+const apiSagaWrapper = (apiAction, apiFn, args) => function* () {
   yield put(apiAction.request(args));
   const { response, error } = yield call(apiFn, args);
   if (response) {
@@ -10,3 +10,6 @@ export const apiSagaWrapper = (apiAction, apiFn, args) => function* () {
   }
   return response;
 };
+export { apiSagaWrapper };
+
+export default apiSagaWrapper;
