@@ -17,4 +17,9 @@ const Field = ({
     {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
   </div>
 );
+
+Field.defaultProps = {
+  meta: {},
+  input: {},
+};
 export default Field;

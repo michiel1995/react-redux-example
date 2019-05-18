@@ -9,7 +9,7 @@ export type FormTemplateProps = {
 type FormProps = {
   onSubmit: void,
   isLoading: Boolean,
-  globalConfig: Object<{ submitText?: String }>,
+  globalConfig?: Object<{ submitText?: String }>,
   fields: Object,
   template: (config: FormTemplateProps) => React.Node,
 };
@@ -41,5 +41,7 @@ const Form = ({
     </form>
   );
 };
-
+Form.defaultProps = {
+  globalConfig: {},
+};
 export default Form;
