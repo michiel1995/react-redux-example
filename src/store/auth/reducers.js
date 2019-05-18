@@ -13,9 +13,19 @@ const isLoading = (state = initialIsLoadingState, action = {}) => {
       return state;
   }
 };
+const initialIsRegisteredState = false;
+const isRegistered = (state = initialIsRegisteredState, action = {}) => {
+  switch (action.type) {
+    case actions.apiActionTypes.REGISTER.SUCCESS:
+      return true;
+    default:
+      return state;
+  }
+};
 
 const auth = combineReducers({
   isLoading,
+  isRegistered,
 });
 
 export default auth;
