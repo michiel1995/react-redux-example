@@ -1,6 +1,8 @@
 import React from 'react';
 import { Field } from 'redux-form';
+import withStyles from 'isomorphic-style-loader/withStyles';
 import CustomField from './Field';
+import styles from './Field.module.scss';
 
 export type FormTemplateProps = {
   renderField: (key: string) => React.node,
@@ -25,7 +27,6 @@ const Form = ({
       <Field
         label={config.label}
         name={key}
-        component="input"
         component={CustomField}
         type={config.type || 'text'}
         placeholder={config.placeholder}
@@ -45,4 +46,4 @@ const Form = ({
 Form.defaultProps = {
   globalConfig: {},
 };
-export default Form;
+export default withStyles(styles)(Form);

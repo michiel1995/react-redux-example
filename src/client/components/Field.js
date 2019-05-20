@@ -1,6 +1,5 @@
 import React from 'react';
 import type { FieldProps } from 'redux-form';
-import withStyles from 'isomorphic-style-loader/withStyles';
 
 import styles from './Field.module.scss';
 
@@ -23,4 +22,4 @@ Field.defaultProps = {
   meta: {},
   input: {},
 };
-export default withStyles(styles, Field);
+export default Field;

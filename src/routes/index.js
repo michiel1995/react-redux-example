@@ -16,6 +16,7 @@ router.get('*', (req, res) => {
   const context = {};
   const css = new Set(); // CSS for all rendered React components
   const insertCss = (...styles) => styles.forEach(style => css.add(style._getCss()));
+  const state = store.getState();
 
   const content = renderToString(
     <StyleContext.Provider value={{ insertCss }}>
@@ -35,7 +36,11 @@ router.get('*', (req, res) => {
         <style>${[...css].join('')}</style>
       </head>
       <body>
-        <div id="root">${content}</div>
+        <div id="app">${content}</div>
+        <script>
+            window.STORE_DATA = ${JSON.stringify(state).replace('<script>', '')}
+        </script>
+        <script src="/bundle.js"></script>
       </body>
     </html>`;
   res.status(200).send(html);
