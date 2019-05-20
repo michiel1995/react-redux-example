@@ -1,8 +1,9 @@
 import React from 'react';
 
+import withStyles from 'isomorphic-style-loader/withStyles';
 import styles from './LogoBlock.module.scss';
-import { ReactComponent as WineBottle } from '../assets/wine-bottle.svg';
-import { ReactComponent as Logo } from '../assets/w-4-p-vf.svg';
+import WineBottle from '../assets/wine-bottle.svg';
+import Logo from '../assets/w-4-p-vf.svg';
 
 const LogoBlock = () => (
   <div className={styles.logoBlock}>
@@ -13,4 +14,4 @@ const LogoBlock = () => (
     <WineBottle className={styles.wineBottle} />
   </div>
 );
-export default LogoBlock;
+export default withStyles(styles)(LogoBlock);

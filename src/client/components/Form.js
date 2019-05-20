@@ -20,6 +20,7 @@ const Form = ({
   console.log(isLoading);
   const renderField = (key) => {
     const config = fields[key];
+
     return (
       <Field
         label={config.label}

@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import Layout from '../components/Layout';
 import LogoBlock from '../components/LogoBlock';
 import RegisterFormContainer from '../containers/RegisterForm';
-import { ReactComponent as Logo } from '../assets/w-4-p-vf-2-small.svg';
+import Logo from '../assets/w-4-p-vf-2-small.svg';
 
 type RegisterProps = {
   isRegistered: Boolean,
